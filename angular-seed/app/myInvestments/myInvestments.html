@@ -1,0 +1,38 @@
+<div class="container" ng-init="init()">
+	<div class="page-header" style="margin-top:-15px">
+		<h3>Meus Investimentos</h3>      
+	</div>
+
+	<div class="col-xs-12 pull-right" ng-repeat="loan in loans" style="margin-bottom: 1rem">
+		<div class="col-xs-12 box boxRadius">
+			<div class=col-sm-3 style="padding-left: 0px">
+				<img ng-src="{{image[0].src}}" class="boxAvatar pull-left"/>
+				<div style="margin-left: 50px">
+					<p>{{loan.BorrowerName}}</p>
+					<jk-rating-stars max-rating="5" rating="loan.Grade" read-only="true" on-rating="2"></jk-rating-stars>
+					<a href="{{loan.FacebookId}}">Facebook</a><br>
+					<a href="{{loan.TwitterId}}">Linkedin</a>
+				</div>
+
+			</div>
+			<div class="col-sm-3">
+				<label>Valor</label>
+				<p>R$ {{loan.AmountInCents/100}},00</p>
+			</div>
+			<div class="col-sm-3">
+				<label>Data pagamento</label>
+				<p>{{loan.DueDate|date:'yyyy-MM-dd'}}</p>
+			</div>
+			<div class="col-sm-3">
+				<label>Status</label>
+				<p>{{loan.LoanStatusEnum}}</p>
+			</div>
+
+			<div class="col-sm-12" style="margin-top: 1rem">
+				<label>Comentários</label>
+				<p>{{loan.CommentToLender}}</p>
+			</div>
+		</div>		
+	</div>
+    
+</div>

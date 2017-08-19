@@ -1,0 +1,61 @@
+<div ng-init="init()">
+	<div class="navbar navbar-inverse navbar-fixed-top" ng-hide="userLogged">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="" ng-click="changeView('view1')"><img style="max-width:60px; margin-top: -7px;" alt="Brand" src="img/icon.png" class="img-responsive" /></a>
+	        </div>
+	        <center>
+	            <div class="navbar-collapse collapse" id="navbar-main">
+	                <form class="navbar-form navbar-right" role="search">
+	                	<a href="" style="margin-right: 5px" ng-click="changeView('register')">Cadastrar</a>
+	                    <div class="form-group">
+	                        <input type="text" class="form-control" name="username" placeholder="Username" ng-model="user.name">
+	                    </div>
+	                    <div class="form-group">
+	                        <input type="password" class="form-control" name="password" placeholder="Password" ng-model="user.password">
+	                    </div>
+	                    <button type="submit" class="btn btn-default" ng-click="loginRequest()">Entrar</button>          
+	                </form>
+	            </div>
+	        </center>
+	    </div>
+	</div>
+
+	<div class="navbar navbar-inverse navbar-fixed-top" ng-show="userLogged">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="" ng-click="changeView('view2')"><img style="max-width:60px; margin-top: -7px;" alt="Brand" src="img/icon.png" class="img-responsive" /></a>
+	            <ul class="nav navbar-nav">
+			      <li><a href="" ng-click="changeView('view2')">Home</a></li>
+			      <li><a href="" ng-click="changeView('myInvestments')">Meus investimentos</a></li>
+			    </ul>
+	        </div>
+	        <center>
+	            <div class="navbar-collapse collapse" id="navbar-main">
+	            	<img ng-src="{{image[0].src}}" class="company-header-avatar pull-right"/>
+	                <ul class="nav navbar-nav pull-right">
+	                    <li class="dropdown pull-right">
+	                        <a href="" class="dropdown-toggle" data-toggle="dropdown">{{userDatas.Name}} <b class="caret"></b></a>
+	                        <ul class="dropdown-menu">
+	                        	<li><a href="" ng-click="changeView('profile')">Meu perfil</a>
+	                            </li>
+	                            <li><a href="" ng-click="changeView('view1')">Sair</a>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </div>
+	        </center>
+	    </div>
+	</div>
+</div>

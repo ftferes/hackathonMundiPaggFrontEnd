@@ -1,0 +1,165 @@
+<div class="container">
+	<div class="page-header" style="margin-top:-15px">
+		<h3>Cadastrar</h3>      
+	</div>
+	<div class="row">
+		<div class="col-md-12" style="margin-bottom: 2rem">
+			<label>Meu perfil</label>
+			<div class="btn-group btn-group-justified form-group">
+			  <label class="btn btn-primary" ng-class="{active: userDatas.LoanTypeEnum == 'Lender'}">
+			    <input type="radio" name="Lender" id="option2" value="Lender" ng-model="userDatas.LoanTypeEnum" /> Lender
+			  </label>
+			  <label class="btn btn-primary" ng-class="{active: userDatas.LoanTypeEnum == 'Borrower'}">
+			    <input type="radio" name="Borrower" id="option3" value="Borrower" ng-model="userDatas.LoanTypeEnum" /> Borrower
+			  </label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">		
+			<form>
+				<div class="col-md-12" style="margin-bottom: 2rem">
+					<div class="form-group">
+						<label>Login:</label>
+	                    <input type="text" class="form-control" placeholder="Username" ng-model="userDatas.Username">
+	                </div>
+	                <div class="form-group">
+	                  	<label>Senha:</label>
+	                    <input type="password" class="form-control" placeholder="Password" ng-model="userDatas.Password">
+	                </div>
+	                <div class="form-group">
+	                  	<label>Valor:</label>
+	                    <input type="number" class="form-control" ng-model="userDatas.LoanInCents">
+	                </div>
+				</div> 
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nome:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Name">
+					</div>
+					<div class="form-group">
+						<label>E-mail:</label>
+						<input type="email" class="form-control" ng-model="userDatas.Email">
+					</div>
+					<div class="form-group">
+						<label>Facebook:</label>
+						<input type="text" class="form-control" ng-model="userDatas.FacebookId">
+					</div>
+					<div class="form-group">
+						<label>Twitter:</label>
+						<input type="text" class="form-control" ng-model="userDatas.TwitterId">
+					</div>
+
+
+
+
+
+					<div class="form-group">
+						<label>Celular</label>
+						<input type="text" class="form-control" ng-model="userDatas.MobilePhone">
+					</div>
+					<div class="form-group">
+						<label>Telefone (Fixo):</label>
+						<input type="text" class="form-control" ng-model="userDatas.HomePhone">
+					</div>
+					<div class="form-group">
+						<label>Telefone de Trabalho:</label>
+						<input type="text" class="form-control" ng-model="userDatas.WorkPhone">
+					</div>
+
+					<div class="form-group">
+	                  	<label>Taxa por dia:</label>
+	                    <input type="text" class="form-control" ng-model="userDatas.TaxPerDay">
+	                </div>
+
+			        <div class="row form-group">
+						<label class="col-xs-12">Gẽnero:</label>
+						<div class="col-sm-3">
+				            <label class="radio-inline">
+				                 <input name="gender" id="input-gender-male" value="M" type="radio" ng-model="userDatas.GenderEnum" />Masculino
+				             </label>
+				        </div>
+				        <div class="col-sm-3">
+				             <label class="radio-inline">
+				                  <input name="gender" id="input-gender-female" value="F" type="radio" ng-model="userDatas.GenderEnum"/>Feminino
+				             </label>
+				         </div>
+				    </div>
+
+				    <div class="row form-group">
+						<label class="col-xs-12">Aniversário:</label>
+						<div class="col-sm-6">
+							<input type="date" id="exampleInput" name="input" ng-model="userDatas.BirthDate" placeholder="yyyy-MM-dd"/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<label class="col-xs-12">Data prevista para pagamento:</label>
+						<div class="col-sm-6">
+							<input type="date" name="input" ng-model="userDatas.DueDate" placeholder="yyyy-MM-dd"/>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>País:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.Country">
+					</div>
+					<div class="form-group">
+						<label>Estado:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.State">
+					</div>
+					<div class="form-group">
+						<label>Cidade:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.City">
+					</div>
+					<div class="form-group">
+						<label>Bairro:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.District">
+					</div>
+					<div class="form-group">
+						<label>Rua:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.Street">
+					</div>
+					<div class="form-group">
+						<label>Número:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.Number">
+					</div>
+					<div class="form-group">
+						<label>Complemento:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.Complement">
+					</div>
+					<div class="form-group">
+						<label>CEP:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Address.ZipCode">
+					</div>
+					<div class="form-group">
+						<label>RG:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Documents[0].DocumentNumber">
+					</div>
+					<div class="form-group">
+						<label>CPF:</label>
+						<input type="text" class="form-control" ng-model="userDatas.Documents[1].DocumentNumber">
+					</div>
+
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label>
+					    	<input type="checkbox" ng-model="accepted"> Aceito os termos de uso!
+					  	</label><br/>
+					</div>
+				</div>
+
+			</form>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button type="button" class="btn btn-success pull-right col-md-1" ng-click="SendData()" ng-disabled="!accepted">Salvar</button>
+			<button type="button" class="btn btn-danger pull-right col-md-1" ng-click="changeView('view1')" style="margin:0 1rem">Voltar</button>
+		</div>
+	</div>
+</div>
