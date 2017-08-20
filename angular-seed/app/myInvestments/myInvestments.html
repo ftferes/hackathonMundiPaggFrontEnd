@@ -1,6 +1,6 @@
 <div class="container" ng-init="init()">
 	<div class="page-header" style="margin-top:-15px">
-		<h3>Meus Investimentos</h3>      
+		<h3>Meus Empréstimos</h3>      
 	</div>
 
 	<div class="col-xs-12 pull-right" ng-repeat="loan in loans" style="margin-bottom: 1rem">
@@ -28,7 +28,12 @@
 				<p>{{loan.LoanStatusEnum}}</p>
 			</div>
 
-			<div class="col-sm-12" style="margin-top: 1rem">
+			<div class="col-sm-3 pull-right">
+				<label>Razão</label>
+				<p>{{loan.LoanReason}}</p>
+			</div>
+
+			<div class="col-sm-6 pull-right" style="margin-top: 1rem">
 				<label>Comentários</label>
 				<p>{{loan.CommentToLender}}</p>
 			</div>
